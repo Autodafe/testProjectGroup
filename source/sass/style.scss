@@ -1,0 +1,19 @@
+// Переменные
+@import "./global/variables.scss";
+
+// Базовые стили
+@import "./global/fonts.scss";
+@import "./global/global.scss";
+@import "./global/utils.scss";
+
+// Блоки
+@import "blocks/button.scss";
+@import "blocks/page.scss";
+@import "blocks/page-body.scss";
+@import "blocks/content-wrapper.scss";
+@import "blocks/main-header.scss";
+@import "blocks/main-container.scss";
+@import "blocks/navigation.scss";
+@import "blocks/hero.scss";
+@import "blocks/burger-button.scss";
+@import "blocks/pictures.scss";

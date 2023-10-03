@@ -1,0 +1,12 @@
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1400px;
+  min-height: 100%;
+  margin: 0 auto;
+
+  background-color: $color-mint-cream;
+  box-shadow: 0 5px 15px rgba($color-dark-green, 0.2);
+}

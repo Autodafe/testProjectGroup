@@ -1,0 +1,153 @@
+.navigation__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background-color: $color-seagull;
+  transform: translateY(-100%);
+
+  transition: transform 0.3s ease;
+
+  gap: 1px;
+
+  @media (min-width: $vp-768) {
+    position: relative;
+    z-index: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+
+    background-color: $color-mint-cream;
+    transform: translateY(0);
+
+    transition: none;
+
+    gap: 40px;
+  }
+
+  .is-open & {
+    display: grid;
+    min-width: 320px;
+
+    transform: translateY(0);
+
+    @media (min-width: $vp-768) {
+      display: flex;
+    }
+  }
+
+  .no-js & {
+    position: relative;
+
+    display: grid;
+
+    transform: translateY(0);
+
+    transition: none;
+  }
+}
+
+.navigation__item {
+  box-shadow: 0 1px 0 rgba($color-light-black, 0.2), inset 0 1px 0 rgba($color-white, 0.2);
+
+  @media (min-width: $vp-768) {
+    display: flex;
+    justify-content: center;
+
+    box-shadow: none;
+  }
+
+  &:last-child {
+    @media (max-width: ($vp-768 - 1px)) {
+      background: linear-gradient(to bottom, rgba($color-black, 0) 90%, rgba($color-black, 0.2) 100%);
+    }
+  }
+
+  &:nth-child(4n - 1) {
+    @media (min-width: $vp-768) {
+      grid-column-start: 4;
+    }
+  }
+}
+
+.navigation__link {
+  position: relative;
+
+  display: block;
+  padding: 17px 67px 12px 67px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: $color-white;
+  text-transform: capitalize;
+  text-decoration: none;
+
+  @media (min-width: $vp-768) {
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-charcoal;
+
+    background-color: $color-mint-cream;
+  }
+
+  &--current::after {
+    @media (min-width: $vp-768) {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+
+      width: 21px;
+      height: 1.5px;
+
+      background-color: $color-atomic-tangerine;
+      transform: translate(-50%);
+    }
+  }
+
+  &:hover {
+    background-color: $color-shakespeare;
+
+    @media (min-width: $vp-768) {
+      color: $color-seagull;
+
+      background-color: $color-mint-cream;
+    }
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+
+    background-color: $color-shakespeare-darknest;
+
+    @media (min-width: $vp-768) {
+      color: rgba($color-black, 0.3);
+
+      background-color: $color-mint-cream;
+    }
+  }
+
+  &:focus-visible {
+    outline: 3px $color-roman-coffee solid;
+
+    @media (min-width: $vp-768) {
+      color: $color-seagull;
+
+      background-color: $color-white-smoke;
+      outline: none;
+    }
+  }
+}
