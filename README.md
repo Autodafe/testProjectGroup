@@ -4,5 +4,6 @@
 * Проект собирается в build командой `npm run build`.
 * Проект запускается командой `npm start`.
 * Используется `NodeJS` версии "16.20.0" . 
+* Ссылка на готовый сайт https://autodafe.github.io/testProjectGroup/
 
 ---
