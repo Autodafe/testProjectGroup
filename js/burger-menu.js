@@ -1,0 +1,1 @@
+const burgerButton=document.querySelector(".burger-button"),mainHeader=document.querySelector(".main-header"),initBurgerButton=()=>{mainHeader.classList.remove("no-js"),burgerButton.addEventListener("click",(()=>mainHeader.classList.toggle("is-open")))};export{initBurgerButton};

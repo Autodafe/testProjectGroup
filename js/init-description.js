@@ -1,0 +1,1 @@
+import{getData}from"./api.js";const description=document.querySelector(".hero_description"),DATA_URL="https://baconipsum.com/api/?type=lucky",initText=t=>{description.textContent=t},onGetSuccess=t=>initText(t),onGetError=()=>console.log("Ошибка в AJAX запросе"),initDescriptionText=()=>getData(DATA_URL,onGetSuccess,onGetError);export{initDescriptionText};
